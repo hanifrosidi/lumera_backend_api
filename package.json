@@ -1,0 +1,28 @@
+{
+  "name": "capstone_project_predictive_maintenance_copilot",
+  "version": "1.0.0",
+  "description": "Management machine use",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js",
+    "migrate": "dotenv -e .env -- node-pg-migrate -m migrations -d $DATABASE_URL up"
+  },
+  "author": "A25-CS037",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "node-pg-migrate": "^8.0.3",
+    "pg": "^8.16.3",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^11.0.0",
+    "nodemon": "^3.1.10"
+  }
+}
