@@ -13,6 +13,7 @@ import {
   buildTicketMainten,
 } from "../helper/helper-sensor.js";
 import maintenanceRouter from "./routes/maintenance.js";
+import chatbotRouter from "./routes/chatbot.js";
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(express.json());
 app.use("/machine", machinesRouter);
 app.use("/maintenance", maintenanceRouter);
 app.use("/auth", authRouter);
+app.use("/chatbot", chatbotRouter);
 
 const server = app.listen(port, () => {
   console.log(

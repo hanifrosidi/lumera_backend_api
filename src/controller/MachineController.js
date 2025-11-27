@@ -34,7 +34,7 @@ class MachineController {
       if (err instanceof Error) {
         return res.status(500).json({
           status: "fail",
-          message: "oke",
+          message: err.message,
         });
       }
     }
